@@ -104,3 +104,7 @@ The script used to generate the data can be found in the folder by the name ***g
 It's not mandatory to execute the script until you want to create new data. Because we already executed it and exported the generated data to JSON files provided in the folder ***extra_data***
 
 Also another script to link the Ceo collection with the business collection should be executed mandatory for some queries to work ***associate_collections.py***
+
+### Other manipulations
+
+The date in the ***tip*** collection is a string. To prepare the data to be ready for the queries we include a script that change the type of the field from string to date. That's done in the script ***date_conversion.js*** that's executed at the end of the ***populate_mongodb.bash*** script
