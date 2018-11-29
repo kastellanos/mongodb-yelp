@@ -7,4 +7,4 @@ db.ceo.aggregate([
 {$group:{
 "_id":"$_id",
 avg:{$avg: "$list_entreprises.stars"}
-}}])
+}}]).forEach(function(doc){print(doc._id,doc.avg)})

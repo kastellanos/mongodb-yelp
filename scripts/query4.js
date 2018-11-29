@@ -18,9 +18,11 @@ db.user.aggregate([
                     }
                  }
               },
-              { $project: { user_id:1, stars:1, text:1} }
+              { $project: { user_id:1, stars:1, text:1, business_id:1} }
            ],
            as: "req_data"
          }
     }
-])
+]).forEach(function(doc){if(doc.req_data.length>0) {
+  print("***\nuser_id=",doc.user_id);
+  doc.req_data.forEach(function(d){print("\nbusiness_id=",d.business_id,"\nstarts=",d.stars,"\ntext=",d.text)})}})

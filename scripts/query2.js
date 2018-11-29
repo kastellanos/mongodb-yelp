@@ -12,4 +12,4 @@ db.tip.aggregate(
          }
      }
    ]
-)
+).forEach( function(doc){ print(doc)})
