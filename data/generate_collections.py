@@ -27,7 +27,7 @@ def generate_bank_accounts(db):
 def main():
     c =    MongoClient()
     db = c.test_database
-    db = c.yelpdb
+    db = c.yelp_academic
     try:
         print(db.command("serverStatus"))
         ceo_size = random.randint(1000, 1500)
