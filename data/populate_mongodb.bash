@@ -23,3 +23,4 @@ python associate_collections.py
 
 # Execute a update query that convert a string type in a date type
 mongo date_conversion.js
+mongo create_indexes.js

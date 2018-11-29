@@ -2,8 +2,6 @@ conn = new Mongo();
 db = conn.getDB("yelp_academic")
 
 //two manners:
-db.review.createIndex({useful:1})
-db.review.createIndex({stars:1})
 db.review.aggregate(
   [
     {
